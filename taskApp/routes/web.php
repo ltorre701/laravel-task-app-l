@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+Route::get('/tasks', function () {
     return view('tasks.index');
 });
