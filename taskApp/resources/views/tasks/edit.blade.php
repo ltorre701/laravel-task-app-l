@@ -24,7 +24,7 @@
         </div>
 
         <div class="mb-4">
-            <label for="meterials_required">Materials Required:</label>
+            <label for="materials_required">Materials Required:</label>
             <input type="text" class="w-full border rounded px-3 py-2" name="materials_required" id="materials_required" value="{{ old('materials_required', $task->materials_required) }}">
             @error('materials_required')
                 <div style="color: red;">{{ $message }}</div>
@@ -33,7 +33,7 @@
 
         <div class="mb-4">
             <label for="deadline">Deadline:</label>
-            <input type="text" class="w-full border rounded px-3 py-2" name="deadline" id="deadline" value="{{ old('deadline', $task->deadline) }}">
+            <input type="datetime-local" class="w-full border rounded px-3 py-2" name="deadline" id="deadline" value="{{ old('deadline', $task->deadline) }}">
             @error('deadline')
                 <div style="color: red;">{{ $message }}</div>
             @enderror
