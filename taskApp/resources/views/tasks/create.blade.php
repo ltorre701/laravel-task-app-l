@@ -8,14 +8,27 @@
 
             {{-- Task Name --}}
             <div class="mb-4">
-                <label for="task_name">Task Name<span class="text-red-500">*</span>: </label>
-                <input type="text" placeholder="Required" required>
+                <label for="task_name" class="block mb-1">Task Name<span class="text-red-500">*</span>: </label>
+                <input type="text" 
+                id="task_name"
+                pattern="^[a-zA-Z0-9\s\-_]{3,255}$"
+                title="Task name must be 3-255 characters long and can contain letters, numbers, spaces, hyphens and underscores"
+                class="w-full border rounded px-3 py-2"
+                oninvalid="this.setCustomValidity('Please enter a valid task name')"
+                oninput="this.setCustomValidity('')"
+                placeholder="Required" required>
             </div>
 
             {{-- Task Location --}}
             <div class="mb-4">
-                <label for="task_location">Location: </label>
-                <input type="text" placeholder="Optional" id="task_location">
+                <label for="task_location">Location:</label>
+                <input type="text" 
+                placeholder="Optional"
+                name="task_location" 
+                id="task_location"
+                pattern="^a-zA-Z0-9\s\-_,]{0,255}$"
+                title="Location can contain letters, numbers, spaces, hyphens, underscores, and commas"
+                class="w-full border rounded px-3 py-2">
             </div>
 
             {{-- Time Estimate (or Time Complexity) --}}
