@@ -46,7 +46,7 @@
             {{-- Deadline (Optional) --}}
             <div class="mb-4">
                 <label for="deadline">Deadline: </label>
-                <input type="text" placeholder="Optional" id="deadline">
+                <input type="date" placeholder="Optional" id="deadline">
             </div>
 
             {{-- Priority (Optional) --}}
